@@ -4,7 +4,7 @@
 
 ---
 
-## Properties of Alerts
+# Properties of Alerts
 
 1) Timestamp :- it indicates that When the event happened.
 
@@ -34,4 +34,20 @@
 ---
 
 ## What is Alert Triage?
+
+- Alert Triage is process to quickly analyzing an alert to decide if it is real or false.
+
+# Process of Alert Triage
+
+1) Review the Alert (SourceIP, DestinationIP, Time etc.)
+
+2) Collect more information like network logs, endpoint logs, process execution etc.
+
+3) Check if indicatores are malicious for example Domain reputation, File hash etc.
+
+4) Validate the Alert if it is true positive or false positive.
+
+5) Escalate the alert if attack is confirmed.
+
+6) write a brief report with Alert summery,inverstigation steps,final verdict,evidence etc.
 
