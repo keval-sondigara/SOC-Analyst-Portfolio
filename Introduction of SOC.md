@@ -9,13 +9,13 @@ A SOC Analyst is a cybersecurity professional who monitors security alerts, inve
 SOC Roles
 ---
 1) SOC Analyst L1:
-   This is an entry-level role in the SOC, responsible for monitoring security alerts, investigating them, and performing basic triage.
+   → this is an entry-level role in the SOC, responsible for monitoring security alerts, investigating them, and performing basic triage.
 
 2) SOC Analyst L2:
-   They perform deep investigation of incidents, malware analysis, endpoint investigation, and threat intelligence usage.
+   → They perform deep investigation of incidents, malware analysis, endpoint investigation, and threat intelligence usage.
 
 3) SOC Analyst L3:
-   They are responsible for advanced threat hunting, attack pattern analysis, and incident leadership.
+   → They are responsible for advanced threat hunting, attack pattern analysis, and incident leadership.
 
 ---
 
