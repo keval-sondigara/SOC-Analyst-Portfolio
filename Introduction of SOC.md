@@ -21,10 +21,10 @@ SOC Roles
 
 SOC Workflow
 ---
-1) Attacker attempts login
-2) SIEM generates alert
-3) L1 analyst reviews that alert
-4) if any suspicious activity found then escalates to L2
-5) L2 analyst investigates it deeply
-6) if attack is confirmed then it containment it to L3
-7) L3 performs threat hunting and prevention
+1)  Attacker attempts login
+2)  SIEM generates alert
+3)  L1 analyst reviews that alert
+4)  if any suspicious activity found then escalates to L2
+5)  L2 analyst investigates it deeply
+6)  if attack is confirmed then it containment it to L3
+7)  L3 performs threat hunting and prevention
