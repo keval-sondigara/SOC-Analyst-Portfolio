@@ -1,11 +1,11 @@
 # SOC_Level1_path
 A complerte documentation and writeups of Tryhackme's SOC Level 1 Path 
 
-# 🖐️ HI, I'm Keval
+🖐️ HI, I'm Keval
 
-#🎯 Aspiring SOC Analyst | Cybersecurity Researcher & Learner
+🎯 Aspiring SOC Analyst | Cybersecurity Researcher & Learner
 
-#📍 India
+📍 India
 
 ## About me
 
