@@ -51,3 +51,13 @@
 
 6) write a brief report with Alert summery,inverstigation steps,final verdict,evidence etc.
 
+---
+
+# Alert Metrics
+
+|  Metric                          |  Common SLA              |  Description                                    |
+|----------------------------------|--------------------------|-------------------------------------------------|
+| SOC Team Availability            |  24/7                    | Schedule of SOC                                 |
+| Mean Time to Detect (MTTD)       |  5 Minutes               | Average time between attack and detection       |
+| Mean Time to Acknowledge (MTTA)  |  10 Minutes              | time of L1 analyst to start triage of new alert |
+| Mean Time to Respond (MTTR)      |  60 Minutes              | time taken by SOc to actually stop breach       |
