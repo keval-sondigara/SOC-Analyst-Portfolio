@@ -59,7 +59,7 @@ Example: Database dump + ransomware.
 
 --------------------------------------------------------------------
 
-## 🧠 why it is important in SOC
+## 🧠 why it is important in SOC?
 
 - we can detect attacks in early stage.
 - we can analyze the logs stage-wise.
