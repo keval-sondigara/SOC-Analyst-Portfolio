@@ -28,3 +28,21 @@ Example:
 Example:
 * PowerShell suspicious command
 * Encoded commands
+
+### 3) Data theft indicator
+Example:
+* Huge uploads
+* Unusual downloads
+* Rare external connections
+
+---------------------------------------------------------------------
+
+## There are serveral types of logs
+
+* windows event logs
+* sysmon logs
+* firewall logs
+* dns logs
+* vpn logs
+* proxy logs
+* web server logs
