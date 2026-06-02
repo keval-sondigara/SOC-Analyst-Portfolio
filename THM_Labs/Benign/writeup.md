@@ -2,9 +2,9 @@
 
 ---------------------------------------------------
 
-### Title: In this challenge room, i investigated a compromised host.
+### Title: In this challenge room, I investigated a compromised host.
 ### Category:- SOC
-### Description:- i investigated host-centric logs in this challenge room to find suspicious process execution. To learn more about Splunk and how to investigate the logs.
+### Description:- I investigated host-centric logs in this challenge room to find suspicious process execution. To learn more about Splunk and how to investigate the logs.
 
 ----------------------------------------------------
 
@@ -28,7 +28,7 @@ we can see there is 2 users with name amelia but if we look closely in last one 
 
 ### 3). Which user from the HR department was observed to be running scheduled tasks?
 
-i found this by runinng the following command:
+i found this by running the following command:
 
 ### index=win_eventlogs schtasks
 
@@ -48,8 +48,6 @@ This activity is suspicious because certutil.exe is a LOLBIN (Living Off The Lan
 
 ### Answer: haroon
 
-### Answer:- haroon
-
 ### 5). To bypass the security controls, which system process (lolbin) was used to download a payload from the internet?
 
 we saw in task 4 that attacker used certutil to download payload from the internet
@@ -58,7 +56,7 @@ we saw in task 4 that attacker used certutil to download payload from the intern
 
 ### 6). What was the date that this binary was executed by the infected host? format (YYYY-MM-DD)
 
-look in  the EventTime field 
+The EventTime field shows when the downloaded binary was executed on the infected host.
 
 ### Answer:- 2022–03–04
 
@@ -89,13 +87,24 @@ i just opened the site https://controlc.com/e4d11035 to see the flag.
 |     Type        |             Value                |
 |-----------------|--------------------------------- |
 |     User        |    haroon                        |
-|     Domain      |    contolc.com                   |
-|     File        |    bengin.exe                    |
+|     Domain      |    controlc.com                  |
+|     File        |    benign.exe                    |
 |     LOLBIN      |    certutil.exe                  |
 |     URL         |    https://contolc.com/e4d11035  |
 
 
 -------------------------------------------------------------------------------------------
+
+
+## Incident Summary
+
+During the investigation of Windows event logs, a suspicious user activity was identified on an HR department host. The user "haroon" abused certutil.exe, a legitimate Windows LOLBIN, to download a payload from controlc.com.
+
+The downloaded file was saved as benign.exe and later executed on the system. This behavior indicates malicious payload delivery and potential post-exploitation activity. Several IOCs, including the domain, URL, file name, and LOLBIN, were identified during the investigation.
+
+
+---------------------------------------------------------------------------------------------
+
 
 ## what i learned?
 
