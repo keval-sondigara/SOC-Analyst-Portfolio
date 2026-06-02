@@ -2,9 +2,9 @@
 
 ---------------------------------------------------
 
-### Title: In this challenge room, we will investigate a compromised host.
+### Title: In this challenge room, i investigated a compromised host.
 ### Category:- SOC
-### Description:- We will investigate host-centric logs in this challenge room to find suspicious process execution. To learn more about Splunk and how to investigate the logs.
+### Description:- i investigated host-centric logs in this challenge room to find suspicious process execution. To learn more about Splunk and how to investigate the logs.
 
 ----------------------------------------------------
 
