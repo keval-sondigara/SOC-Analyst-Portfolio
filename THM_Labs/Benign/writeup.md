@@ -22,13 +22,13 @@ i applied this filter
 
 ### index="win_eventlogs" EventID="4688" | stats count by Username | sort -count
 
-we can see there is 2 users with name amelia but if we look closly in last one it looks suspicous
+we can see there is 2 users with name amelia but if we look closely in last one it looks suspicous
 
 ### Answer:- Amel1a
 
 ### 3). Which user from the HR department was observed to be running scheduled tasks?
 
-i found this by runing following command
+i found this by runinng the following command:
 
 ### index=win_eventlogs schtasks
 
@@ -44,11 +44,15 @@ we can see user chris.fort executed the scheduled task.
 
 we can see from above screenshot haroon executed command and used certutil.exe to download payload from file-sharing host.
 
+This activity is suspicious because certutil.exe is a LOLBIN (Living Off The Land Binary) commonly abused by attackers to download payloads.
+
+### Answer: haroon
+
 ### Answer:- haroon
 
 ### 5). To bypass the security controls, which system process (lolbin) was used to download a payload from the internet?
 
-we sae in task 4 that attacker used certutil to download payload from the internet
+we saw in task 4 that attacker used certutil to download payload from the internet
 
 ### Answer:- certutil.exe
 
@@ -68,7 +72,7 @@ look in  the EventTime field
 
 ### 9). The suspicious file downloaded from the C2 server contained malicious content with the pattern THM{……….}; what is that pattern?
 
-if we open https://controlc.com/e4d11035 we can see flag 
+i just opened the site https://controlc.com/e4d11035 to see the flag. 
 
 ### Answer:- THM{KJ&*H^B0}
 
@@ -76,3 +80,28 @@ if we open https://controlc.com/e4d11035 we can see flag
 
 ### Answer:- https://controlc.com/e4d11035
 
+
+--------------------------------------------------------------------------------------------
+
+
+## IOC (Indicator of Compromise)
+
+|     Type        |             Value                |
+|-----------------|--------------------------------- |
+|     User        |    haroon                        |
+|     Domain      |    contolc.com                   |
+|     File        |    bengin.exe                    |
+|     LOLBIN      |    certutil.exe                  |
+|     URL         |    https://contolc.com/e4d11035  |
+
+
+-------------------------------------------------------------------------------------------
+
+## what i learned?
+
+- Splunk Investigation
+- Windows Event Log Analysis
+- Process Creation Monitoring
+- LOLBIN Detection
+- IOC Identification
+- Threat Hunting
