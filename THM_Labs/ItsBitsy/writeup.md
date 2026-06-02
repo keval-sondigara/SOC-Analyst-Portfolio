@@ -50,12 +50,12 @@ since we knew that attacker used pastebin.com when we scroll down we can see url
 
 ![answer](Q5.png)
 
-### Answer:- pastebin.com/yTg0Ah6a
+### Answer:- https://pastebin.com/yTg0Ah6a
 
 
 ### 6). A file was accessed on the filesharing site. What is the name of the file accessed?
 
-i opend this url in browser and it redireted me on where our host was infected and also flag was mentioned there.
+i opend this url in browser and it redirected me on where our host was infected and also flag was mentioned there.
 
 ### Answer:- secret.txt
 
@@ -75,34 +75,36 @@ the flag is inside the file secret.txt
 ## IOC (Indicators of compromise)
 
 
-|     Field       |          Value            |
-|---------------- |---------------------------|
-|    src_ip       |   192.166.65.54           |
-|    user_agent   |   bitsadmin               |
-|    domain       |   pastebin.com            |
-|    url          |   pastebin.com/yTg0Ah6a   |
-
+|     Field       |          Value                    |
+|---------------- |-----------------------------------|
+|    src_ip       |   192.166.65.54                   |
+|    user_agent   |   bitsadmin                       |
+|    domain       |   pastebin.com                    |
+|    url          |   https://pastebin.com/yTg0Ah6a   |
+|   file          |   secret.txt                      |
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-## Inclident Summary
+## Incident Summary
 
-In this suspicious activity attacker used a well known binary called "bitsadmin" used for windows update purpose to download payload and during this activity host connected on filesharing site "pastebin.com" which was act as c2 server and file name called "secret.txt" was accessed there
 
+The investigation identified suspicious outbound communication originating from host 192.166.65.54. Analysis of network logs revealed the use of bitsadmin, a legitimate Windows utility frequently abused by attackers to download payloads. The host established communication with Pastebin, which was used as a C2 channel. Further investigation revealed access to secret.txt containing the flag.
 
 
 ## what i learned?
 
-- some new kibina search filters
-- how to find details through user agents
-- detecting c2 connections
+- Kibana Log Analysis
+- user agents analysis
+- C2 Detection
+- Network Traffic Analysis
 
 
 
 ## MITRE ATT&CK mapping
 
-|                                 Techniques                                             |     Id       |
-|----------------------------------------------------------------------------------------|--------------|
-|  Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted Non-C2 Protocol |  T1048.003   |
+|       Techniques                 |     Id       |
+|----------------------------------|--------------|
+|  Ingress Tool Transfer           |    T1105     |
+|  BITS Jobs                       |    T1197     |
