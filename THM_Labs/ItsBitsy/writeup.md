@@ -96,7 +96,7 @@ The investigation identified suspicious outbound communication originating from 
 ## what i learned?
 
 - Kibana Log Analysis
-- user agents analysis
+- User-Agent Analysis
 - C2 Detection
 - Network Traffic Analysis
 
