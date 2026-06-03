@@ -111,7 +111,7 @@ Knowing that updater.exe is the next stage of the malware, we’ll check for net
 
 We can see multiple connections from updater.exe
 
-### Answer:- updater.exe
+### Answer:- 6216
 
 
 ### 12). What is the full file path of the malicious process used to establish the C2 connection?
@@ -172,7 +172,7 @@ I used string command with grep to list scheduled task and i finally found it.
 | Hash                 | 52c4384a0b9e248b95804352ebec6c5b                                                      |
 | Url                  | hxxps[://]files[.]boogeymanisback[.]lol/aa2a9c53cbb80416d3b47d85538d9971/update[.]png |
 | File Path            | C:\Programdata\update.js                                                              |
-| C2 Connection        | updater.exe                                                                           | 
+| Process              | updater.exe                                                                           | 
 | IP Address           | 128.199.95.189                                                                        |
 | Port                 | 8080                                                                                  |
 
@@ -193,7 +193,14 @@ I used string command with grep to list scheduled task and i finally found it.
 
 ### Incident Summary
 
-In this investigation the attacker send phishing mail to maxine and it contains malicious attachment called "Resume_WesleyTaylor.doc" after the execution of document it downloads stage 2 payload called "update.js" which is downloaded by "wscript.exe" further investigation reveled that the attacker set a location to C:\Windows\Tasks, downloaded a file, and named it updater.exe and estabilished a C2 connection by using ip 128.199.95.189 and port 8080 and created scheduled task to make it persistence.
+1. Phishing email delivered
+2. User opened Resume_WesleyTaylor.doc
+3. VBA macro executed
+4. update.js downloaded
+5. wscript.exe executed payload
+6. updater.exe installed
+7. C2 connection established to 128.199.95.189:8080
+8. Scheduled task created for persistence
 
 
 -----------------------------------------------------------------------------------------------------------------
@@ -207,5 +214,7 @@ In this investigation the attacker send phishing mail to maxine and it contains 
 |   Malicious VBA Macro                       |    T1059.005  |
 |   Application Layer Protocol: Web Protocols |    T1071.001  |
 |   Scheduled Task                            |    T1053.005  |
+|   Payload Download                          |    T1105      |
+
 
 
