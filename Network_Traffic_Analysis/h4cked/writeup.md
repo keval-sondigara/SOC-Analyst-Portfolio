@@ -53,7 +53,7 @@ From above screenshot on packet number 401 attacker was in /var/www/html directo
 
 ### 6). The attacker uploaded a backdoor. What is the backdoor’s filename?
 
-From below screenshot i found one PHP file which is likely a backdoor.
+The attacker uploaded shell.php, which appears to be a PHP web shell used for remote command execution.
 
 ![answer](Q6.png)
 
@@ -98,7 +98,7 @@ When scrolling down in the TCP stream we can clearly see that attacker used pyth
 
 ### 11). Which command was executed to gain a root shell?
 
-We know in linux there is sudo command is ued to switch in root shell and from above task the attacker also used sudo command to gain root shell.
+The TCP stream shows the attacker executing "sudo su" after obtaining a shell, which resulted in root access.
 
 ### Answer:- sudo su
 
@@ -124,12 +124,14 @@ Since we know that attacker used rootkit to gain unauthorized access and it is v
 
 ## IOC (Indicators of Compromise)
 
-|           field              |     value                   |
-|------------------------------|-----------------------------|
-|    username & password       |     Jenny & password123     |
-|    tools & technique         |     Hydra for bruteforcing  |
-|    file                      |     shell.php               |
-|    malware                   |     Reptile (Rootkit)       |
+|           field              |     value                       |
+|------------------------------|---------------------------------|
+|    username & password       |     Jenny & password123         |
+|    tools                     |     Hydra for bruteforcing      |
+|    file                      |     shell.php                   |
+|    Service                   |     FTP                         |  
+|    URL                       |     pentestmonkey reverse shell |
+|    malware                   |     Reptile (Rootkit)           |
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -156,6 +158,7 @@ In this pcap file investigation the attacker used ftp service and popular tool h
 
 |    Technique                          |      Id        |
 |---------------------------------------|----------------|
-|    Bruteforce                         |     T1110      |
-|    Command and Scripting Interpreter  |     T1059      |
-|    Reptile                            |     S1219      |
+|    FTP Bruteforce                     |     T1110      |
+|    Reverse Shell Commands             |     T1059      |
+|    Web Shell Upload                   |     T1505.003  |
+|    Rootkit Installation               |     T1014      |
