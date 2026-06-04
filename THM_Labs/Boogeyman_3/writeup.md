@@ -164,7 +164,7 @@ For this task i searched for binaries such as curl, certutil that is used for do
 
 As we can see that attacker downloaded a binary "ransomboogey.exe" using powershell
 
-### Answer:- ransomeboogey.exe
+### Answer:- http://ff.sillytechninja.io/ransomboogey.exe
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -181,12 +181,12 @@ As we can see that attacker downloaded a binary "ransomboogey.exe" using powersh
 |        Port                |       80                                             |
 |        UAC Bypass          |       fodhelper.exe                                  |
 |        Credential Dumping  |       Mimikatz                                       |
-|        Username & Hahs     |       itadmin:F84769D250EB95EB2D7D8B4A1C5613F2       |
+|        Credential          |       itadmin:F84769D250EB95EB2D7D8B4A1C5613F2       |
 |        Shared File         |       It_Automation.ps1                              |
 |        User and Hash       |       QUICKLOGISTICS\allan.smith:Tr!ckyP@ssw0rd987   |
 |        Hostname            |       WKSTN-1327                                     |
 |        Parent Process      |       wsmprvhost.exe                                 |
-|        User and Hash       |       administrator:00f80f2538dcb54e7adc715c0e7091ec |
+|        Credential          |       administrator:00f80f2538dcb54e7adc715c0e7091ec |
 |        Dsync Attack        |       backupda                                       |
 |        Ransomware          |       ransomeboogey.exe                              |
 
@@ -216,16 +216,16 @@ In this investigation the attacker executed stage 1 payload "review.dat" and imp
 
 ## MITRE Mapping
  
-|      Technique                             |     Id      |
-|--------------------------------------------|-------------|
-|   Phishing Email Attachment                |  T1566.001  |
-|   System Binary Proxy Execution: Rundll32  |  T1218.011  |
-|   Scheduled Task                           |  T1053.005  |
-|   C2 Connection                            |  T1071.001  |
-|   UAC Bypass                               |  T1548.002  |
-|   Credential Dumping                       |  T1550	.002 |
-|   Share Enumeration                        |  T1135      |
-|   Lateral Movement                         |  T1021.006  |
-|   Hash Dumping via Dcsync Attack           |  T1550.003  |
+|      Technique                                |     Id      |
+|-----------------------------------------------|-------------|
+|   Phishing Email Attachment                   |  T1566.001  |
+|   System Binary Proxy Execution: Rundll32     |  T1218.011  |
+|   Scheduled Task                              |  T1053.005  |
+|   C2 Connection                               |  T1071.001  |
+|   UAC Bypass                                  |  T1548.002  |
+|   OS Credential Dumping                       |  T1003      |
+|   Share Enumeration                           |  T1135      |
+|   Lateral Movement                            |  T1021.006  |
+|   Hash Dumping via Dcsync Attack              |  T1003.006  |
 
 
