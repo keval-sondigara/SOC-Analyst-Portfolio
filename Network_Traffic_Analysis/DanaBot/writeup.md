@@ -29,7 +29,7 @@ For this task i filtering the ip address 62.173.142.148 look in packet number 14
 
 ![answer](Q2.png)
 
-### Answer:- alegato_708.js
+### Answer:- allegato_708.js
 
 
 ### 3). What is the SHA-256 hash of the malicious file used for initial access?
@@ -49,7 +49,7 @@ now use "sha256sum" which is built-in linux utility uswed to calculate the sha25
 
 For this task we will have to do some research on internet that which processes are used when .js file executes in windows i found 2 major processes that windows uses "wscript.exe" and "cscript.exe" 
 
-cscript.exe used for commandline it means we will have to execute javascript file using commands and on the other hand wscript.exe is GUI based we will have to execute javacript file by double clicking and it there is high chance that wscript.exe is used because when any attacker sends any malware via phishing emails or other social enginnering techniques they Expect that victime double clicke it and after the execution of .js file wscript.exe comes in action instead of cscript.exe so our answer should be wscript.exe
+cscript.exe used for commandline it means we will have to execute javascript file using commands and on the other hand wscript.exe is GUI based we will have to execute javacript file by double clicking and The malicious file has a .js extension. On Windows systems, JavaScript files are commonly executed by wscript.exe. Based on the file type and execution method, wscript.exe is the most likely process responsible for execution.
 
 ### Asnwer:- wscript.exe
 
@@ -79,6 +79,7 @@ I did same thing of task 3 to calculate the MD5 hash of resources.dll but here w
 
 |     Field            |     Value                                                          |
 |----------------------|--------------------------------------------------------------------|
+|   Domain             |   portfolio.serveirc.com                                           |
 |   Ip Address         |   62.173.142.148                                                   |
 |   Malicious File     |   allegato_708.js                                                  |
 |   SHA-256 Hash       |   847b4ad90b1daba2d9117a8e05776f3f902dda593fb1252289538acf476c4268 |
@@ -102,17 +103,18 @@ I did same thing of task 3 to calculate the MD5 hash of resources.dll but here w
 
 ## Incident Summary 
 
-In this incident the attacker used a domain "portfolio.serveirc.com" to delivered a payload "allegato_708.js" to the victime machine to gain initial access and this file downloaded another stage 2 payload "resources.dll" and utilized by the attacker for further attack simulation.
+The investigation revealed that the compromised host communicated with the malicious domain portfolio.serveirc.com. The attacker delivered a JavaScript payload (allegato_708.js), which was executed using Windows Script Host and subsequently downloaded a second-stage DLL payload (resources.dll). Hashes of both files were extracted and documented as indicators of compromise.
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## MITRE Mapping
 
-|    Technique             |    Id     |
-|--------------------------|-----------|
-|   Initial Access         |  TA0001   |
-|   Ingress Tool Transfer  |  T1105    |
+|    Technique             |    Id      |
+|--------------------------|------------|
+|   Initial Access         |  TA0001    |
+|   DLL Payload Download   |  T1105     |
+|   Javascript Execution   |  T1059.007 |
 
 
 
