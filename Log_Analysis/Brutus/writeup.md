@@ -93,7 +93,7 @@ As we saw early that attacker used linper.sh to utilize their higher privileges.
 ## Incident Summary
 
 In this investigation i found in auth.log that attacker was trying to bruteforce SSH service using ip address 65.2.161.68 and after some attempts successfuly gained access of user root and after attacker logged in manually to the server and established a terminal session to carry out their objectives
-then attacker added a new user "cyberjunkie" as part of their persistence strategy on the server and gave this new user account higher privileges following MITRE ATT&CK technique T1136.001(local account creation) and logged into their backdoor account and utilized their higher privileges using "linper.sh"
+then attacker added a new user "cyberjunkie" as part of their persistence strategy on the server and gave this new user account higher privileges by following MITRE ATT&CK technique T1136.001(local account creation) and logged into their backdoor account and utilized their higher privileges using "linper.sh"
 
 
 ----------------------------------------------------------------------------------------------------------------
