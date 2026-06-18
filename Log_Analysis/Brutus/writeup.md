@@ -45,7 +45,7 @@ We can see from above screenshot that session number 37 was assigned to the user
 
 ![answer](Q5.png)
 
-We can see that attacker installed linux persistence toolkit linper.sh and also added new user "cyberjunkie" to maintaine persistence.
+The auth.log entries show the creation of a new account named cyberjunkie. This account was later used by the attacker and appears to have been created for persistence.
 
 ### Answer:- cyberjunkie
 
@@ -92,8 +92,8 @@ As we saw early that attacker used linper.sh to utilize their higher privileges.
 
 ## Incident Summary
 
-In this investigation i found in auth.log that attacker was trying to bruteforce SSH service using ip address 65.2.161.68 and after some attempts successfuly gained access of user root and after attacker logged in manually to the server and established a terminal session to carry out their objectives
-then attacker added a new user "cyberjunkie" as part of their persistence strategy on the server and gave this new user account higher privileges by following MITRE ATT&CK technique T1136.001(local account creation) and logged into their backdoor account and utilized their higher privileges using "linper.sh"
+In this investigation i found in auth.log that attacker was trying to bruteforce SSH service using ip address 65.2.161.68 and after some attempts successfully gained access of user root and after attacker logged in manually to the server and established a terminal session to carry out their objectives
+then attacker added a new user "cyberjunkie" as part of their persistence strategy on the server and gave this new user account higher privileges by following MITRE ATT&CK technique T1136.001(local account creation) and logged into their backdoor account and utilized elevated privileges to download and execute linper.sh.
 
 
 ----------------------------------------------------------------------------------------------------------------
