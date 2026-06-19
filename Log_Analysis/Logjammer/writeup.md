@@ -160,7 +160,8 @@ We can see that Microsoft-Windows-Windows Firewall With Advanced Security/Firewa
 
 ## Incident Summary
 
-In this investigation a user " cyberjunkie" logged in into the system and added the outbound rule "Metasploit C2 Bypass" by tampered with firewall settings on the system and further investigation revaled that user changed audit policy of the computer under subcategory "Other Object Access Events" and later user "cyberjunkie" created a scheduled task "HTB-AUTOMATION" and after some activities antivirues identified a threat "SharpHound" and qurantined the system as a part of action and later attacker executed some powershell commands on a system and deleted Microsoft-Windows-Windows Firewall With Advanced Security/Firewall.
+The investigation revealed suspicious activity performed by the user "cyberjunkie". The user modified Windows Firewall settings by creating an outbound rule named "Metasploit C2 Bypass", changed audit policies, and established persistence through a scheduled task named "HTB-AUTOMATION".
+Further analysis identified the use of SharpHound, a reconnaissance tool commonly associated with Active Directory enumeration. Microsoft Defender detected and quarantined the tool. The user also executed PowerShell commands and later cleared Windows Firewall event logs, indicating an attempt to evade detection.
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -175,7 +176,7 @@ In this investigation a user " cyberjunkie" logged in into the system and added 
 |  Policy Subcategory  |  Other Object Access Events                                         |
 |  Scheduled Task      |  HTB-AUTOMATION                                                     |
 |  Scheduled Task Path |  C:\Users\CyberJunkie\Desktop\Automation-HTB.ps1                    |
-|  Malware             |  ShareHound                                                         |
+|  Malware             |  SharepHound                                                         |
 |  Powershell Command  |  Get-FileHash -Algorithm md5 .\Desktop\Automation-HTB.ps1           |
 |  cleared Event Logs  |  Microsoft-Windows-Windows Firewall With Advanced Security/Firewall |
 
