@@ -138,5 +138,7 @@ In this pcap investigation i found too much noise comming from ip "111.224.250.1
 
 |     Technique                     |   Id            |
 |-----------------------------------|-----------------|
-| Exploit Public-Facing Application |  T1190          |
-| Upload Malware                    |  T1608.001      |
+| SQL Injection                     |  T1190          |
+| Web Shell Upload                  |  T1505.003      |
+| Credential USe                    |  T1078          |
+
