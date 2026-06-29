@@ -9,7 +9,7 @@ A complerte documentation and writeups of Tryhackme's SOC Level 1 Path
 
 ## About me
 
-I'm BCA graduate with knowledge of networking, Operating systems and web devlopment. currently learning SOC Level 1 and penetration testing by myself and hands-on labs.
+I'm BCA graduate with knowledge of networking, Operating systems and web devlopment. currently learning SOC Level 1 by myself using online plateforms and hands-on labs.
 
 Focused on:
 - SOC Working
@@ -24,8 +24,7 @@ Focused on:
 ## 🛠 Tools & Technologies
 - Wireshark
 - Splunk
-- Nmap
-- Burpsuite
+- MITRE ATT&CK
 - Linux
 - Snort
 
@@ -34,6 +33,7 @@ Focused on:
 ## 📚 what I Learned
 - Pre Security (THM)
 - cybersecurity101 (THM)
+- SOC Level 1 Path (THM)
 
 ---
 
