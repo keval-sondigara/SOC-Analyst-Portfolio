@@ -53,7 +53,7 @@ I used http contains "search.php" to reduse http noise
 
 From above screenshot we can see in first half attacker tried some random strings and suddenly we can see encoding strings appear from book value of search parameter
 
-![answer](Q4_Decode)
+![answer](Q4_Decode.png)
 
 After decoding the value we can see that attacker was trying to inject sql injection payloads.
 
