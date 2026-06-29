@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/610e1d9b-3f50-4555-8700-f8f0d9fcc955" /># Web Investigation Lab
+# Web Investigation Lab
 
 -------------------------------------------------------------------------------------------
 
