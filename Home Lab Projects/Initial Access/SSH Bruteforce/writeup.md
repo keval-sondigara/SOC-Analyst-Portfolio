@@ -38,7 +38,7 @@ We can see i add few random passwords which contains our original password of us
 
 Now run Hydra against the target Ubuntu machine specifying the user fakeadmin and your password list.
 
-### hydra -l fakeadmin -P passwords.txt ssh://192.168.56.101 -t 4 -V
+### hydra -l fakeadmin -P passwords.txt ssh://192.168.1.5 -t 4 -V
 
 - -l fakeadmin: The targeted username.
 
@@ -96,7 +96,7 @@ Although this both queries which i used is only for my home lab purpose in real 
 |    Field            |    Value       |
 |---------------------|----------------|
 |  Attacker's Ip      |  192.168.1.6   |
-|  Victime's Ip       |  192.168.1. 5  |
+|  Victime's Ip       |  192.168.1.5   |
 |  Username           |  fakeadmin     |
 |  Tools & Techniques |  hydra         |
 
