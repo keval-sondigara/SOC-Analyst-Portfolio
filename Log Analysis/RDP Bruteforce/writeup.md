@@ -16,7 +16,7 @@
 
 ### 1). How many Audit Failure events are there? (Format: Count of Events)
 
-I opend .CSV file in timeline explorer which is digital forensics and incident response tool by Eric Zimmerman and filter for event id 4625 which indicates audit failure
+I opened .CSV file in timeline explorer which is digital forensics and incident response tool by Eric Zimmerman and filter for event id 4625 which indicates audit failure
 
 ![answer](Q1.png)
 
@@ -27,7 +27,7 @@ We can see in bottom right corner total visible lines 3103.
 
 ### 2). What is the username of the local account that is being targeted? (Format: Username) 
 
-For this task i opened .EVTX file which contains only event in details tab we can see that attacker targeted administrator.
+For this task i opened .EVTX file which ontains event details. In the Details tab we can see that attacker targeted administrator.
 
 ![answer](Q2.png)
 
@@ -79,7 +79,7 @@ We can see that this ip is associated with vietnam.
 
 |    Field           |    Value                            |
 |--------------------|-------------------------------------|
-|  Victime Username  |  administrator                      |
+|  Victim Username   |  administrator                      |
 |  Failure Reason    |  Unknown user name or bad password  |
 |  Failure EventID   |  4625                               |
 |  Source Ip         |  113.161.192.227                    |
@@ -91,7 +91,7 @@ We can see that this ip is associated with vietnam.
 
 ## Incident Summary
 
-In this investigation the attacker performed RDP bruteforce attack by targeting administrator the reason was Unknown user name or bad password further investigation reavealed that requests were comming from source ip 113.161.192.227 from vietnam.
+In this investigation the attacker performed RDP bruteforce attack by targeting administrator the reason was Unknown user name or bad password further investigation reavealed that requests were coming from source ip 113.161.192.227 from vietnam.
 
 
 ----------------------------------------------------------------------------------------------------------------
