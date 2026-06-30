@@ -98,7 +98,6 @@ Although this both queries which i used is only for my home lab purpose in real 
 |  Attacker's Ip      |  192.168.1.6   |
 |  Victime's Ip       |  192.168.1. 5  |
 |  Username           |  fakeadmin     |
-|  Password           |  password123   |
 |  Tools & Techniques |  hydra         |
 
 
@@ -111,3 +110,18 @@ Although this both queries which i used is only for my home lab purpose in real 
 | SSH Bruteforce  |  T1110.002    |
 
 
+-------------------------------------------------------------------------------------------------------
+
+## Recommendations
+
+- Disable password authentication
+
+- Enable SSH keys
+
+- Enable Fail2Ban
+
+- Restrict SSH using firewall
+
+- Disable root login
+
+- MFA where possible
