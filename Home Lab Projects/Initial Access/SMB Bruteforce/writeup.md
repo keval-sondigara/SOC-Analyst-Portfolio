@@ -4,7 +4,7 @@
 
 ### In this lab we will see how attacker performs bruteforce attack on SMB.
 
-### SMB is an application layer protocol primarily used for sharing files, printers and serial ports between a nodes and local network it allows attackers to steel data and execute code or move laterally across a windows network.
+### SMB is an application layer protocol primarily used for sharing files, printers and serial ports between a nodes and local network it allows attackers to steal data and execute code or move laterally across a windows network.
 
 
 ---------------------------------------------------------
@@ -83,7 +83,7 @@ Let's open security logs inside the event viewer
 
 We will focus on event id's,
 
-#### 4624 (for successfull login)
+#### 4624 (for successful login)
 #### 4625 (for failed login attempts)
 #### 4776 (NTLM authentication)
 
@@ -97,7 +97,7 @@ Filter event id 4624
 
 ![answer](4624.png)
 
-We can see attacker successfully loged in from ip 192.168.1.6 around same period.
+We can see attacker successfuly loged in from ip 192.168.1.6 around same period.
 
 Now let's analyze this logs in splunk 
 
@@ -114,16 +114,16 @@ Let's try some advanced query and arranged data in manner,
 
 #### index=* source="wineventlog:Security" EventCode=4625 LogonType=3 
 #### | buckets span=1m _time 
-#### | stats count by _time Source_Network_Addess Account_Name 
+#### | stats count by _time Source_Network_Address Account_Name 
 #### | where count>=5
 
-This query will returned all events with 1 minuts lifecycle and aggregated it by time, source ip and account name where count is greater then or equal to 5.
+This query will returned all events with 1-minute time window and aggregated it by time, source ip and account name where count is greater then or equal to 5.
 
 ![answer](bruteforce_detection.png)
 
 We can see all requests that came from our attacker's ip 192.168.1.6.
 
-WE can also write query for successfull logins
+WE can also write query for successful logins
 
 #### (EventCode=4625 OR EventCode=4624)
 #### | sort 0 _time
@@ -136,12 +136,16 @@ WE can also write query for successfull logins
 
 ## IOC (Indicator of Compromise)
 
-|     Field          |    Value      |
-|--------------------|---------------|
-|  Attacker's Ip     |  192.168.1.6  |
-|  Victim's Ip       |  192.168.1.2  |
-|  tools & Technique |  crackmapexec |
-|  User              |  Test         |
+|     Field          |    Value          |
+|--------------------|-------------------|
+|  Attacker's Ip     |  192.168.1.6      |
+|  Victim's Ip       |  192.168.1.2      |
+|  tools & Technique |  crackmapexec     |
+|  User              |  Test             |
+|  Service           |  SMB              |
+|  Port              |  445              |
+|  Logon Type        |  3                |
+|  Event IDs         |  4624, 4625, 4776 |
 
 
 -----------------------------------------------------------------------------------
@@ -151,7 +155,6 @@ WE can also write query for successfull logins
 |    Technique    |    Id       |
 |-----------------|-------------|
 |  SMB Bruteforce |  T1110.001  |
-|  Remote Share   |  T1021.002  |
 
 
 ----------------------------------------------------------------------------------
