@@ -119,7 +119,8 @@ We can see multiple failed events from source ip 192.168.1.6 on target user Test
 
 We can also see successful login after failed attempt using following query
 
-### index=* host="DESKTOP-JJ21L1B" EventCode=4624 Logon_Type=10 Account_Name=Test Source_Network_Address=192.168.1.6 
+### index=* host="DESKTOP-JJ21L1B" EventCode=4624 Logon_Type=10 Account_Name=Test 
+### Source_Network_Address=192.168.1.6 
 ### | stats count by Account_Name Source_Network_Address 
 ### | sort - count
 
