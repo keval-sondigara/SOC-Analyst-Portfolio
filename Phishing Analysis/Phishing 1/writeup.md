@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4cd12d50-d0cb-4792-a60c-65898bc01842" /><img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fce7b989-b604-4355-b51b-f03c1605fe07" /><img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d0c33661-fa5c-4b1c-a816-8cb170c4556e" /># Phishing Analysis
+# Phishing Analysis
 
 -------------------------------------------
 
