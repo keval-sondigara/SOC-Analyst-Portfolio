@@ -52,7 +52,7 @@ Windows must be configured to log failed login attempts.
 2. Navigate to Security Settings > Local Policies > Audit Policy.
 3. Double-click Audit logon events and check both Success and Failure.
 
-Ok now all is done lets strat the attack on our victime machine.
+Ok now all is done let's start the attack on our victim machine.
 
 
 ## 2). The Attack Simulation
@@ -107,7 +107,7 @@ Open splunk dashboard and go to Search and Reporting
 
 I used following query
 
-### index=* host="DESKTOP-JJ21L1B" EventCode=4625 Logon_Type=3 
+### index=* host="DESKTOP-JJ21L1B" EventCode=4625 Logon_Type=10 
 ### | stats count by Account_Name Source_Network_Address 
 ### | sort - count
 
@@ -115,17 +115,17 @@ This query will show logs with failed events and aggregate data by account name 
 
 ![answer](splunk_failed_detection.png)
 
-We cans ee multiple failed events from source ip 192.168.1.6 on target user Test.
+We can see multiple failed events from source ip 192.168.1.6 on target user Test.
 
 We can also see successful login after failed attempt using following query
 
-### index=* host="DESKTOP-JJ21L1B" EventCode=4624 Logon_Type=3 Account_Name=Test Source_Network_Address=192.168.1.6 
+### index=* host="DESKTOP-JJ21L1B" EventCode=4624 Logon_Type=10 Account_Name=Test Source_Network_Address=192.168.1.6 
 ### | stats count by Account_Name Source_Network_Address 
 ### | sort - count
 
 ![answer](splunk_successful_detection.png)
 
-As usual we can see successful login from attcker.
+As usual we can see successful login from attacker.
 
 
 --------------------------------------------------------------
@@ -139,6 +139,8 @@ As usual we can see successful login from attcker.
 |  Victim's Ip         |  192.168.1.5     |
 |  Tools & Techniques  |  Hydra           |
 |  User                |  Test            |
+|  Service             |  RDP             |
+|  Port                |  3389            |
 |  Event IDs           |  4624, 4625      |
 |  host                |  DESKTOP_JJ21L1B |
 
@@ -167,3 +169,7 @@ As usual we can see successful login from attcker.
   - Use an RD Gateways
   - Configure IP Whitelisting
   - Change the Default Port
+
+- Account Lockout Policy
+- Strong Password Policy
+- Monitor Event ID 4625 spikes
