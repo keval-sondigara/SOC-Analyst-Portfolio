@@ -42,7 +42,7 @@ Create a temporary account that we will target during the brute-force attack.
 
 Run cmd as an administrator and run following command,
 
-#### net user victim_user Password123 /add
+#### net user Test Password123 /add
 
 ### Ensure Auditing is Enabled
  
@@ -107,7 +107,7 @@ Open splunk dashboard and go to Search and Reporting
 
 I used following query
 
-### inedx=* host="DESKTOP-JJ21L1B" EventCode=4625 Logon_Type=3 
+### index=* host="DESKTOP-JJ21L1B" EventCode=4625 Logon_Type=3 
 ### | stats count by Account_Name Source_Network_Address 
 ### | sort - count
 
