@@ -78,7 +78,7 @@ Run Hydra against the Windows machine's IP address targeting the standard RDP po
 
 Hydra will cycle through the list, showing failures until it hits Password123 and turns green.
 
-![answer](RDP_hydra)
+![answer](RDP_hydra.png)
 
 WE can see from above screenshot hydra attempted passwords one by one and finally found original password which we set it means our attack is successful now let's jump on our windows machine to detect this bruteforce attack.
 
