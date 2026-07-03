@@ -1,4 +1,4 @@
-#  Suspicious Powershell Execution
+# &#x1F512; Suspicious Powershell Execution
 
 ------------------------------------------------------------
 
