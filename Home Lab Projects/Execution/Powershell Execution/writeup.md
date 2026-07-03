@@ -1,4 +1,4 @@
-# 🔓 Suspicious Powershell Execution
+#  Suspicious Powershell Execution
 
 ------------------------------------------------------------
 
