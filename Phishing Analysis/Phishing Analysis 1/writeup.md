@@ -116,7 +116,7 @@ From above screenshot we can see full heading text in red color.
 
 ## Incident Summary
 
-In this investigation i found a kinnar1975@yahoo.co.uk recieves an email at 18 March 2021 a subjectline highlighted "Undeliverable: Website contact form submission" further investigation revealed that email came from ip address 103.9.171.10 also email contains one attachment "Website contact form submission" after analyzing the attachment there was blogpost hosted at url "https://35000usdperwwekpodf.blogspot.sg?p=9swghttps://35000usdperwwekpodf.blogspot.co.il?o=0hnd" and later using url2png platefrom i found that this blog has been removed permanantly from hosted service.
+The investigation identified a phishing email masquerading as an undeliverable website contact form notification. Analysis of the email headers revealed the originating IP address 103.9.171.10, which resolved to c5s2-1e-syd.hosting-services.net.au. The email contained an attachment leading to a Blogspot-hosted URL. Historical analysis showed that the page had already been removed, suggesting it was previously used as part of the phishing infrastructure.
 
 
 ----------------------------------------------------------------
