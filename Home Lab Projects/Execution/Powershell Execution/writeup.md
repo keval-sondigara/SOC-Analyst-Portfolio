@@ -2,7 +2,7 @@
 
 ------------------------------------------------------------
 
-### In this home lab we will see how attackers use powershell for fileless execution, reconnaissance and initial access as well let see step by step practical how attackers do it and how we detect it.
+## In this home lab we will see how attackers use powershell for fileless execution, reconnaissance and initial access as well let see step by step practical how attackers do it and how we detect it.
 
 ----------------------------------------------------------
 
@@ -93,7 +93,7 @@ We can see all powershell commands wich we executed let's try some advance queri
 
 ### index=* EventCode=1 
 ### | eval cmd_lower = lower(CommandLine) 
-### | search (cmd_lower="*-EncodedCommand*" OR cmd_lower="*-enc*" OR cmd_lower="*-w Hidden*" OR cmd_lower"*bypass*") 
+### | search (cmd_lower="*-EncodedCommand*" OR cmd_lower="*-enc*" OR cmd_lower="*-w Hidden*" OR cmd_lower="*bypass*") 
 ### | stats count by Image ParentImage CommandLine
 
 ![answer](query_detection.png)
@@ -146,7 +146,7 @@ This command will finds all keywords which we mentioned and aggregate data by th
 
      - Use AppLocker and create rules that allows only admin approved scripts to be execute.
 
-### 5). Network Segmentation and LOIBAS 
+### 5). Network Segmentation and LOLBAS
 
      - Set strict firewall rules at workstation that blocks any outbound connections at unknown ip or url.
 
