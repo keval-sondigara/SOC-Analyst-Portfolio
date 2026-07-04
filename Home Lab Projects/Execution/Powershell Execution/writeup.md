@@ -81,6 +81,76 @@ Attackers use this technique to bypass security measures now let's see in our SI
 
 --------------------------------------------------------------------------
 
+## 3). Detection in our SIEM
+
+First we will start with basic query,
+
+### index=* powershell
+
+![answer](detection.png)
+
+We can see all powershell commands wich we executed let's try some advance queries,
+
+### index=* EventCode=1 
+### | eval cmd_lower = lower(CommandLine) 
+### | search (cmd_lower="*-EncodedCommand*" OR cmd_lower="*-enc*" OR cmd_lower="*-w Hidden*" OR cmd_lower"*bypass*") 
+### | stats count by Image ParentImage CommandLine
+
+![answer](query_detection.png)
+
+This command will finds all keywords which we mentioned and aggregate data by this fields.
 
 
+-----------------------------------------------------------------------
+
+## IOC (Indicator of compromise)
+
+|     Field               |     Value                                                      |
+|-------------------------|----------------------------------------------------------------|
+|  Powershell Cmdlets     |  -nop                                                          |
+|                         |  -WindowsStyle                                                 |
+|                         |  -ExecutionPolicy                                              |
+|                         |  -EncodedCommand                                               |
+|                         |  -Invoke-WebRequest                                            |
+|                         |  -New-Object                                                   |      
+|  Base64 Encoded String  |  SW52b2tlLVdlYlJlcXVlc3QgLVVybCAiaHR0cDovL2V4YW1wbGUuY29tIg==  |
+
+
+--------------------------------------------------------------------
+
+## MITRE ATT&CK Mapping
+
+|    Technique                     |     Id     |
+|----------------------------------|------------|
+|  Sucpicious Powershell Execution |  T1059.001 |
+
+
+------------------------------------------------------------------------
+
+
+## Recommendations
+
+### 1. Enforce Constrained Language Mode (CLM)
+    
+     - In powershell there is diffrent kind of languages it is on by default on full language mode so enforced CLM at end-user's workstation.
+
+### 2. Change the Execution Policy
+
+     - Set execution policy to ALLSigned or RemoteSigned in whole domain using group policy object (GPO).
+
+### 3. Disable Powershell v2
+
+     - Uncheck or disable powershell 2.0 completly beacuse in version 2 there is not any advance features like script block logging and other advance security machenisms so attackers can take advantage of it.
+
+### 4. Use AppLocker or Windows Defender Application Control (WDAC)
+
+     - Use AppLocker and create rules that allows only admin approved scripts to be execute.
+
+### 5. Network Segmentation and LOIBAS 
+
+     - Set strict firewall rules at workstation that blocks any outbound connections at unknown ip or url.
+
+### 6. AMSI (Antimalware Scan Interface)
+
+     - AMSI scans every scripts before their execution in memory whatever it is obfuscated or encoded.
 
