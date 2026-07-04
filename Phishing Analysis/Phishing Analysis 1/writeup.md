@@ -91,3 +91,39 @@ Submit the url in URL2PNG to find the heading text
 From above screenshot we can see full heading text in red color.
 
 ### Answer:- Blog has been removed
+
+
+-----------------------------------------------------------
+
+
+## IOC (Indicator of Compromise)
+
+|      Field          |    Value                                                                                          |
+|---------------------|---------------------------------------------------------------------------------------------------|
+|  Recipient's Email  |  kinnar1975@yahoo.co.uk                                                                           |
+|  Subject            |  Undeliverable: Website contact form submission                                                   |
+|  Email's Time       |  18 March 2021 04:14                                                                              |
+|  Ip Address         |  103.9.171.10                                                                                     |
+|  Resolved Host      |  c5s2-1e-syd.hosting-services.net.au                                                              |
+|  Attachment         |  Website contact form submission                                                                  |
+|  Url                |  https://35000usdperwwekpodf.blogspot.sg?p=9swghttps://35000usdperwwekpodf.blogspot.co.il?o=0hnd  |
+|  Hosted Service     |  blogspot                                                                                         |
+|  Heading Text       |  Blog has been removed                                                                            |
+
+
+-------------------------------------------------------------
+
+
+## Incident Summary
+
+In this investigation i found a kinnar1975@yahoo.co.uk recieves an email at 18 March 2021 a subjectline highlighted "Undeliverable: Website contact form submission" further investigation revealed that email came from ip address 103.9.171.10 also email contains one attachment "Website contact form submission" after analyzing the attachment there was blogpost hosted at url "https://35000usdperwwekpodf.blogspot.sg?p=9swghttps://35000usdperwwekpodf.blogspot.co.il?o=0hnd" and later using url2png platefrom i found that this blog has been removed permanantly from hosted service.
+
+
+----------------------------------------------------------------
+
+
+## MITRE ATT&CK Mapping
+
+|    Technique          |    Id       |
+|-----------------------|-------------|
+|  Phishing Attachment  |  T1566.001  |
