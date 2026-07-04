@@ -36,7 +36,7 @@ We can see subject of this email in subject field.
 
 ### 4). What company is the attacker trying to imitate?
 
-Open the email in any email client
+Open the email in any email client,
 
 ![answer](Q4.png)
 
