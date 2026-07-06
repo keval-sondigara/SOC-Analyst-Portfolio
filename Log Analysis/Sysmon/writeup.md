@@ -82,5 +82,39 @@ We can see full command from above screenshot that attacker was trying to get re
 ### Answer:- 9898
 
 
+---------------------------------------------
+
+
+## IOC (Indicator of Compromise)
+
+|     Indicator         |     Value                                                                      |
+|-----------------------|--------------------------------------------------------------------------------|
+|  Initial Access       |  updater.hta                                                                   |
+|  Ports                |  6969, 9898                                                                    |
+|  Commands             |  Invoke-WebRequest, ipconfig                                                   |
+|  Environment variable |  comspec=C:\\windows\\temp\\supply.exe                                         |
+|  LOLBIN               |  ftp.exe                                                                       |
+|  Downloaded File      |  https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe   |
+
+
+
+-------------------------------------------------------------
+
+
+## Incident Summary
+
+In this investigation the attacker downloaded a file "updater.hta" using powershell and got initial access of the system using it and later the attacker set an environment variable of malware file and use LOLBIN binary "ftp.exe" to execute system commands further investigation revealed that attacker downloaded a file from gituhub named "JuicyPotato.exe" and also got reverse shell of system.
+
+
+---------------------------------------------------------------
+
+
+## MITRE ATT&CK Mapping
+
+|    Technique     |   Id       |
+|------------------|------------|
+|  Powershell      |  T1059.001 |
+|  ftp.exe         |  T1218     |
+|  Reverse Shell   |  T1059     |
 
 
