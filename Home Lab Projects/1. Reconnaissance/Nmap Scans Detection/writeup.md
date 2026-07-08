@@ -2,9 +2,9 @@
 
 --------------------------------
 
-## In this lab we will see how attacker collects information using Nmap it is populer network scanning tool used to find open ports, services and other informations.
+## In this lab we will see how attacker collects information using Nmap it is popular network scanning tool used to find open ports, services and other information.
 
-## We will see diffrent scanning techniques used by the attacker and how to detect it.
+## We will see different scanning techniques used by the attacker and how to detect it.
 
 ---------------------------------
 
@@ -32,13 +32,15 @@ Now suricata is ready for detection
 --------------------------------
 
 
-## 2. Scanning wih Nmap
+## 2. Scanning with Nmap
 
-first we will send ICMP Ping packets to our victime machine let see what suricata generates
+first we will send ICMP Ping packets to our victim machine let see what suricata generates
 
 ![answer](icmp_ping_attack.png)
 
-I send some ICMP packets from kali machine we can see ICMP echo packet from ip 192.168.1.7 and server respond with reply packet to kali machine it means both VM can communicating with each other
+I send some ICMP packets from kali machine we can see ICMP echo packet from ip 192.168.1.7 and server respond with reply packet to kali machine it means both VM can communicating with each other.
+
+Nmap also performs host discovery before scanning (unless `-Pn` is used). Excessive ICMP Echo Requests may indicate reconnaissance activity.
 
 Let's try some scanning with Nmap.
 
@@ -67,11 +69,11 @@ This will send ACK packets to our ubuntu machine.
 We can see suricata generated an alert with NMAP Ack Scan also we can see source ip and destination ip.
 
 
-### 3). OS Detection (-o)
+### 3). OS Detection (-O)
 
 In this technique Nmap identifies remote operating systems using TCP/IP stack fingerprinting. it sends crafted TCP,UDP and ICMP packets to a target and then analyze response details like TTL, window size. these responses are matched against the internal database of OS fingerprints.
 
-#### nmap -o 192.168.1.6
+#### nmap -O 192.168.1.6
 
 ![answer](os_detection.png)
 
@@ -109,9 +111,12 @@ In this technique Nmap connects to open ports, sends protocol-specific probes an
 
 ### 7). Aggressive Scan (-A)
 
-An Nmap aggressive scan is a comprehensive network reconnaissance technique activated with the -A flag it can retrive details like Os fingerprints, service versions and running scripts but it is also easily detected by firewalls.
+An Nmap aggressive scan is a comprehensive network reconnaissance technique activated with the -A flag it can retrieve details like Os fingerprints, service versions and running scripts but it is also easily detected by firewalls.
 
 #### nmap -A <TARGET>
+
+
+#### ⚠ Default rules did not generate an alert for this scan type. Custom signatures were required.
 
 
 -------------------------------------------
@@ -119,11 +124,13 @@ An Nmap aggressive scan is a comprehensive network reconnaissance technique acti
 
 ## IOC (Indicators of Compromise)
 
-|     Indicator        |   Value      |
-|----------------------|--------------|
-|  Attacker's Ip       |  192.168.1.7 |
-|  Victim's Ip         |  192.168.1.6 |
-|  Tools & Techniques  |  Nmap        |
+|     Indicator        |   Value                            |
+|----------------------|------------------------------------|
+|  Attacker's Ip       |  192.168.1.7                       |
+|  Victim's Ip         |  192.168.1.6                       |
+|  Tools & Techniques  |  Nmap                              |
+|  Scan Types          |  SYN, ACK, UDP, Xmas, OS Detection |
+|  IDS                 |  Suricata                          |
 
 
 --------------------------------------------
