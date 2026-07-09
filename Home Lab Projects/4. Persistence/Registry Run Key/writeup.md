@@ -2,7 +2,7 @@
 
 ----------------------------------
 
-## In this lab we will se how attackers achieve persistence by setting registry keys.
+## In this lab we will see how attackers achieve persistence by setting registry keys.
 
 ## Registry Run keys are Windows Registry locations that automatically execute programs or scripts when a system boots up or a user logs in Widely used by threat actors for persistence, they allow malicious payloads to run either under a specific user or system-wide.
 
@@ -24,13 +24,13 @@
 
 We will simulate a standard CurrentVersion\Run registry modification. This technique maps directly to MITRE ATT&CK T1547.001.
 
-First open cmd or poweshell in windows machine then Run the following command to add a fake malicious entry into the current user's Run key. This points to a mock beacon payload (calc.exe)
+First open cmd or powershell in windows machine then Run the following command to add a fake malicious entry into the current user's Run key. This points to a mock beacon payload (calc.exe)
 
 ### reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v "Lab_Backdoor" /t REG_SZ /d "C:\Windows\System32\calc.exe" /f
 
 ![answer](reg_key_added.png)
 
-We can see from above screenshot our registry key is successfuly added,
+We can see from above screenshot our registry key is successfully added,
 
 Now let's how we can detect this step by step.
 
@@ -72,7 +72,7 @@ Let's write industry standard queries,
 ### | stats count min(_time) as firstTime max(_time) as lastTime by ComputerName, User, Image, TargetObject, Details
 ### | rename Image as "Writing_Process", Details as "Persisted_Payload"
 
-This query will filter only events with id 13 and search target object by \\CurrentVersion\\Run and \\CurrentVersion\\RunOnce. * is wildcard character it will give all output with this keywords and then i used aggregation commands min and max to reduse result and at last i renamed the image and details field for better look and redable format.
+This query will filter only events with id 13 and search target object by \\CurrentVersion\\Run and \\CurrentVersion\\RunOnce. * is wildcard character it will give all output with this keywords and then i used aggregation commands min and max to reduce result and at last i renamed the image and details field for better look and readable format.
 
 ![answer](final_splunk_query.png)
 
@@ -81,14 +81,14 @@ This query will filter only events with id 13 and search target object by \\Curr
 
 ## IOC (Indicator of Compromise)
 
-|      Indicator    |     Value       |
-|-------------------|-----------------|
-|  Victim           |   Windows 10    |
-|  Event Id         |   13            |
-|  Logs             |   Sysmon        |
-|  SIEM             |   Splunk        |
-|  Registry Value   |   Lab_Backdoor  |
-|  Startup Program  |   calc.exe      |
+|      Indicator    |     Value                                            |
+|-------------------|------------------------------------------------------|
+|  Registry Path    |   HKCU\Software\Microsoft\Windows\CurrentVersion\Run |
+|  Event Id         |   13                                                 |
+|  Logs             |   Sysmon                                             |
+|  SIEM             |   Splunk                                             |
+|  Registry Value   |   Lab_Backdoor                                       |
+|  Startup Program  |   calc.exe                                           |
 
 
 ------------------------------------------------
