@@ -162,17 +162,17 @@ WE can also write query for successful logins
 
 ## Recommendations
 
-- Network Perimeter Defense
+### 1. Network Perimeter Defense
   - Block Port 445 at the firewall
   - Enable VPN Access
   - Network Segmentation
 
-- Authentication & Credential Hardening
+### 2. Authentication & Credential Hardening
   - Account Lockout Policies
   - Implement MFA
   - Disable NTLM
 
-- Protocol & System Hardening
+### 3. Protocol & System Hardening
   - Enable SMB Signing
   - Disable Legacy SMBv1
   - Implement SMB Authentication Rate Limiter
