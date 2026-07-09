@@ -114,14 +114,14 @@ Although this both queries which i used is only for my home lab purpose in real 
 
 ## Recommendations
 
-- Disable password authentication
+### 1. Disable password authentication
 
-- Enable SSH keys
+### 2. Enable SSH keys
 
-- Enable Fail2Ban
+### 3. Enable Fail2Ban
 
-- Restrict SSH using firewall
+### 4. Restrict SSH using firewall
 
-- Disable root login
+### 5. Disable root login
 
-- MFA where possible
+### 6. MFA where possible
