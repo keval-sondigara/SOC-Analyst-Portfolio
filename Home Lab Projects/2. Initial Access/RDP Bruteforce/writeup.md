@@ -161,16 +161,16 @@ As usual we can see successful login from attacker.
 
 ## Recommendations
 
-- Hardening Remote Access
+### 1. Hardening Remote Access
   - Never Expose RDP Directly
   - Enforce MFA
   - Enable Network Level Authentication
  
-- Restricting Access & Traffic
+### 2. Restricting Access & Traffic
   - Use an RD Gateways
   - Configure IP Whitelisting
   - Change the Default Port
 
-- Account Lockout Policy
-- Strong Password Policy
-- Monitor Event ID 4625 spikes
+### 3. Account Lockout Policy
+### 4. Strong Password Policy
+### 5. Monitor Event ID 4625 spikes
