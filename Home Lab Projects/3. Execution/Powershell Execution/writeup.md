@@ -130,27 +130,21 @@ This command will finds all keywords which we mentioned and aggregate data by th
 
 ## Recommendations
 
-### 1). Enforce Constrained Language Mode (CLM)
-    
-     - In powershell there is diffrent kind of languages it is on by default on full language mode so enforced CLM at end-user's workstation.
+### 1. Enforce Constrained Language Mode (CLM)
+- In powershell there is diffrent kind of languages it is on by default on full language mode so enforced CLM at end-user's workstation.
 
-### 2). Change the Execution Policy
+### 2. Change the Execution Policy
+- Set execution policy to ALLSigned or RemoteSigned in whole domain using group policy object (GPO).
 
-     - Set execution policy to ALLSigned or RemoteSigned in whole domain using group policy object (GPO).
+### 3. Disable Powershell v2
+- Uncheck or disable powershell 2.0 completly beacuse in version 2 there is not any advance features like script block logging and other advance security machenisms so attackers can take advantage of it.
 
-### 3). Disable Powershell v2
+### 4. Use AppLocker or Windows Defender Application Control (WDAC)
+- Use AppLocker and create rules that allows only admin approved scripts to be execute.
 
-     - Uncheck or disable powershell 2.0 completly beacuse in version 2 there is not any advance features like script block logging and other advance security machenisms so attackers can take advantage of it.
+### 5. Network Segmentation and LOLBAS
+- Set strict firewall rules at workstation that blocks any outbound connections at unknown ip or url.
 
-### 4). Use AppLocker or Windows Defender Application Control (WDAC)
-
-     - Use AppLocker and create rules that allows only admin approved scripts to be execute.
-
-### 5). Network Segmentation and LOLBAS
-
-     - Set strict firewall rules at workstation that blocks any outbound connections at unknown ip or url.
-
-### 6). AMSI (Antimalware Scan Interface)
-
-     - AMSI scans every scripts before their execution in memory whatever it is obfuscated or encoded.
+### 6. AMSI (Antimalware Scan Interface)
+- AMSI scans every scripts before their execution in memory whatever it is obfuscated or encoded.
 
