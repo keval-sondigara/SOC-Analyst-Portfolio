@@ -106,14 +106,14 @@ We can see lots of alerts for xmas scanning.
 
 In this technique Nmap connects to open ports, sends protocol-specific probes and analyzes the responses to identify the exact application name, version number and associated details.
 
-#### nmap -sV <TARGET>
+#### nmap -sV 192.168.1.6
 
 
 ### 7). Aggressive Scan (-A)
 
 An Nmap aggressive scan is a comprehensive network reconnaissance technique activated with the -A flag it can retrieve details like Os fingerprints, service versions and running scripts but it is also easily detected by firewalls.
 
-#### nmap -A <TARGET>
+#### nmap -A 192.168.1.6
 
 
 #### ⚠ Default rules did not generate an alert for this scan type. Custom signatures were required.
@@ -147,23 +147,23 @@ An Nmap aggressive scan is a comprehensive network reconnaissance technique acti
 
 ## Recommendations
 
-#### 1. Firewall Configurations
-      - Keep open only required ports over the internet.
-      - Configure firewall properly.
+### 1. Firewall Configurations
+- Keep open only required ports over the internet.
+- Configure firewall properly.
 
-##### 2. Intrusion Detection / Prevention
-      - Deploy suricata, snort or zeek.
-      - Enable port scan detection rules.
-      - Malicious scans can be also blocked by using IPS mode.
+### 2. Intrusion Detection / Prevention
+- Deploy suricata, snort or zeek.
+- Enable port scan detection rules.
+- Malicious scans can be also blocked by using IPS mode.
 
-#### 3. Rate Limiting
-      - Set limit for thousands of attempts from one source.
-      - Firewall rate limiting rules can be also set in windows and linux systems.
+### 3. Rate Limiting
+- Set limit for thousands of attempts from one source.
+- Firewall rate limiting rules can be also set in windows and linux systems.
 
-#### 4. Access Control
-      - Restrict administrative services like RDP,SMB,SSH to only trusted ip addresses.
-      - Enable MFA (multi-factor authentication).
+### 4. Access Control
+- Restrict administrative services like RDP,SMB,SSH to only trusted ip addresses.
+- Enable MFA (multi-factor authentication).
 
-#### 5. Logging & Alerting
-      - Forward windows security logs, sysmon and suricata logs to central SIEM.
-      - Enable port scan alerts in dashboard.
+### 5. Logging & Alerting
+- Forward windows security logs, sysmon and suricata logs to central SIEM.
+- Enable port scan alerts in dashboard.
