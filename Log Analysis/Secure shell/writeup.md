@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/00d1b01a-1196-4daf-8de9-ef302132d4e7" /># Secure Shell
+# Secure Shell
 
 -----------------------------------
 
