@@ -62,7 +62,7 @@ This is how attackers use cron jobs using user-level privileges now let see how 
 
 ### Root-Level System Persistence (Dropping a file)
 
-If the attacker gains root privilege, they typically avoid crontab -e because it leaves obvious footprints. Instead, they drop a malicious script directly into system-wide cron directories.
+Attackers with root privileges may choose system-wide cron directories because they allow centrally managed scheduled tasks and can blend with legitimate administrative activity.
 
 We will Create a hidden malicious script in the system-wide hourly cron folder,
 
@@ -84,7 +84,7 @@ give it necessary permissions,
 
 #### sudo chmod +x /etc/cron.hourly/.system-update
 
-I will work same like we saw in user-level cron jobs but it will execute on hourly basis instead of seconds.
+I will work same like we saw in user-level cron jobs but it will execute on hourly basis instead of every minute.
 
 Now let's move on our detection phase.
 
@@ -113,7 +113,7 @@ Now let see in syslog, it is standard software architecture used in linux for co
 
 ![answer](syslog_detection.png)
 
-We can see from above screenshot our cron job was executed on every second.
+We can see from above screenshot our cron job was executed on every minute.
 
 Now let see how we can detect this in our splunk,
 
@@ -179,5 +179,6 @@ Use:
 - /etc/cron.allow
 - /etc/cron.deny
 
+### 5). File Integrity Monitoring (FIM)
 
 
