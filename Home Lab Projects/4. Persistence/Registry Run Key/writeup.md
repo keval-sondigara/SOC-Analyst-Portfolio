@@ -2,10 +2,9 @@
 
 ----------------------------------
 
-## In this lab we will see how attackers achieve persistence by setting registry keys.
-
 ## Registry Run keys are Windows Registry locations that automatically execute programs or scripts when a system boots up or a user logs in Widely used by threat actors for persistence, they allow malicious payloads to run either under a specific user or system-wide.
 
+## In this lab we will see how attackers achieve persistence by setting registry keys.
 
 ---------------------------------
 
