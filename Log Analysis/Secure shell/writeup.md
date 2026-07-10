@@ -19,7 +19,7 @@ For this task i used regex to extract ip address from each log like this,
 
 ![answer](Q1.png)
 
-We can see the internal ip address 192.168.1.17 there which is likely attacker's ip because i found this ip so many times so far.
+The internal IP 192.168.1.17 appeared consistently across authentication attempts and was later associated with successful logins, making it the likely source of the activity.
 
 ### Answer:- internal:192.168.1.17
 
@@ -109,8 +109,7 @@ The defalult location of ssh logs are in event viewer is Windows Logs -> Applica
 
 ## Incident Summary
 
-In this investigation an internal ip 192.168.1.17 found to perform suspicious activities started at 2021-04-29 23:52:25.989 further investigation revaled that attacker performed bruteforce attack to found valid credentials and later password accepted for user sophia and attacker loged-in twice into this account.
-
+The investigation identified repeated SSH authentication attempts originating from the internal IP 192.168.1.17. Analysis revealed that the attacker successfully authenticated to the account sophia and logged in twice, indicating successful credential compromise.
 
 -----------------------------------------
 
