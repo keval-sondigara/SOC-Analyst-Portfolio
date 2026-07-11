@@ -21,7 +21,7 @@
 
 ## 2). Attack Simulation
 
-First we will create a new user for our lab purpouse,
+First we will create a new user for our lab purpose,
 
 ### sudo useradd Alex
 
@@ -29,7 +29,7 @@ Next we will log in as Alex via ssh,
 
 ### ssh Alex@192.168.1.6
 
-Ok all is done now let's create some SUID missconfiguration,
+Ok all is done now let's create some SUID misconfiguration,
 
 We will write a vulnerable C program that will spawn a root shell,
 
@@ -56,7 +56,7 @@ Let's breakdown this code,
 
 - setgid(0); :- similarly, this attempts to set the effective group id (gid) of current process to 0 which belongs to root group.
 
-- system("/bin/bash") :- this executes a system command to oprn a new bash terminal session.
+- system("/bin/bash") :- this executes a system command to open a new bash terminal session.
 
 Compile this file using gcc compiler it will compile this file and create a new file named backup,
 
@@ -70,7 +70,7 @@ Now set SUID bit on file backup,
 
 ### sudo chmod 4755 backup
 
-Here 4 is reffer as SUID bit because we already set owner of this file to root now after setting SUID bit this file will run with root-level privileges.
+Here 4 is referred to SUID bit because we already set owner of this file to root now after setting SUID bit this file will run with root-level privileges.
 
 Now let's start Attack on our ssh terminal,
 
@@ -78,7 +78,7 @@ Now let's start Attack on our ssh terminal,
 
 We can see from above screenshot we were normal user but after running backup script it spawn a new root shell and now we are root user.
 
-### This is just demo lab for understanding in real systems there are not this kind of vulnerable program exists attacker try different techniques and misconfigurations.
+### This lab intentionally uses a vulnerable SUID program for educational purposes. In real environments, attackers typically exploit existing SUID misconfigurations or vulnerable privileged binaries rather than creating a new SUID binary themselves.
 
 
 ## 3). Detection & Log Analysis
@@ -97,13 +97,13 @@ Let see in splunk how we can detect it,
 
 Use this basic query,
 
-### index=* source=/var/log/audit/audit.log" key=suid_exec
+### index=* source="/var/log/audit/audit.log" key=suid_exec
 
 ![answer](splunk_1.png)
 
 We can also detect it by script name,
 
-### index=* source=/var/log/audit/audit.log" /opt/lab/backup
+### index=* source=/var/log/audit/audit.log" "/opt/lab/backup"
 
 ![answer](splunk_2.png)
 
@@ -115,10 +115,10 @@ We can also detect it by script name,
 
 |     Indicator        |    Value            |
 |----------------------|---------------------|
-|  User                |  Alex               |
-|  Ip Address          |  192.168.1.6        |
-|  Vulnerable Scripts  |  backup.c & backup  |
-|  Audit Rule          |  suid_exec          |
+|  Binary              |  /opt/lab/backup    |
+|  File Owner          |  root               |
+|  Permission          |  4755               |
+|  Audit Key           |  suid_exec          |
 
 
 --------------------------------------------------------
@@ -147,7 +147,7 @@ We can also detect it by script name,
 - Restrict wildcards.
 
 
-### 3). Services & Schduled Tasks
+### 3). Services & Scheduled Tasks
 - Run as non-root.
 - Secure cron jobs.
 - disable root login.
@@ -156,3 +156,9 @@ We can also detect it by script name,
 ### 4). Auditing & Monitoring
 - Enumerate vulnerabilities.
 - Monitor changes.
+
+
+### 5). Use file integrity monitoring (AIDE/Tripwire)
+
+### 6). Enumerate SUID Binaries
+- find / -perm -4000 -type f 2>/dev/null
