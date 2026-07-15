@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b1a0e274-4738-4773-a518-90f47001507a" /># Tomcat Takeover Lab
+# Tomcat Takeover Lab
 
 ------------------------------
 
