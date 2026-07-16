@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c1317881-a336-4f32-bc34-0ebaf3641122" /># PhishStrike Lab
+# PhishStrike Lab
 
 ------------------------------
 
@@ -62,3 +62,67 @@ We can see full url where malware requests.
 
 ### 6). Understanding the registry entries added to the auto-run key by malware is crucial for identifying its persistence mechanisms. Based on the BitRAT malware sample analysis, what is the executable's name in the first value added to the registry auto-run key?
 
+We will copy sha-256 hash with BitRAT tagfrom privious question, i used any.run and pasted this hash,
+
+![answer](Q6.png)
+
+We can see full report after scrolling we can see inside registry activity that attacker added Jzwvix.exe in registry auto-run key.
+
+### Answer:- Jzwvix.exe
+
+
+### 7). Identifying the SHA-256 hash of files downloaded from a malicious URL is essential for tracking and analyzing malware activity. Based on the BitRAT analysis, what is the SHA-256 hash of the file previously downloaded and added to the autorun keys?
+
+![answer](Q7.png)
+
+Just paste sha-256 hash which we copied from task 6 in virustotal and go in behaviour tab inside file dropped section we can see sha-256 hash of JZWVIX.exe.
+
+### Answer:-  bf7628695c2df7a3020034a065397592a1f8850e59f9a448b555bc1c8c639539
+
+
+### 8). Analyzing the HTTP requests made by malware helps in identifying its communication patterns. What is the URL in the HTTP request used by the loader to retrieve the BitRAT malware?
+
+In virustotal go in relations tab we can see that malware server.exe to load BitRAT malware
+
+![answer](Q8.png)
+
+We can see that malware used server.exe to retrieve BitRAT malware.
+
+### Answer:- http://107.175.247.199/loader/server.exe
+
+
+### 9). Introducing a delay in malware execution can help evade detection mechanisms. What is the delay (in seconds) caused by the PowerShell command according to the BitRAT analysis?
+
+![answer](Q9_powershell.png)
+
+We can see that powershell executed base74 encoded command let's decode it using cyberchef,
+
+![answer](Q9_base64.png)
+
+We can see that powershell command delays 50 seconds according to the BitRAT analysis.
+
+### Answer:- 50
+
+
+### 10). Tracking the command and control (C2) domains used by malware is essential for detecting and blocking malicious activities. What is the C2 domain used by the BitRAT malware?
+
+I look for any.run report for BitRAT malware,
+
+![answer](Q10.png)
+
+We can see intresting domain in connection tab from different ip, it looks like that BitRAT malware used this domain for C2 communication.
+
+### Answer:- gh9st.mywire.org
+
+
+### 11). Understanding how malware exfiltrates data is essential for detecting and preventing data breaches. According to the AsyncRAT analysis, what is the Telegram Bot ID used by this malware?
+
+![answer](Q11_hash.png)
+
+We will copy second sha-256 hash for AsyncRAT,
+
+I saw various online reports for this but i found it on triage website.
+
+![answer](Q11.png)
+
+### Answer:- bot5610920260
