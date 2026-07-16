@@ -34,7 +34,7 @@ And we can see only two packets there let's open the packet, we can see full url
 
 ### 3). Name the ransomware executable file?
 
-As we saw in privious question that it was safecrypt.exe.
+As we saw in previous question that it was safecrypt.exe.
 
 ### Answer:- safecrypt.exe
 
@@ -54,7 +54,7 @@ We can see md5 hash of this ransomware executable.
 
 ### 5). What is the name of the ransomware?
 
-I upload this hash on malwarebazar whcih is public databse of malware samples,
+I upload this hash on malwarebazar which is public database of malware samples,
 
 ![answer](Q5.png)
 
@@ -87,7 +87,7 @@ We can see that domain starts with letter 'd' in relations tab.
 
 TeslaCrypt was a notorious ransomware active between 2015 and 2016. originally targeting video game files and user profiles, it utilized various file extensions like .ccc, .vvv, .xxx and .micro, in our case we have Tender.pdf.micro file it means this ransomware encrypted original Tender.pdf file with .micro extension we have to decrypt this file.
 
-the devlopers of TeslaCrypt officilly ceased operations and released their master encryption keys in 2016.
+the developers of TeslaCrypt officilly ceased operations and released their master encryption keys in 2016.
 
 So lets download TeslaCryptDecrypter to decrypt this pdf file,
 
@@ -108,7 +108,7 @@ We can see from above screenshot that it successfully decrypt the pdf file, let'
 |     Indicator          |     Value                                    |
 |------------------------|----------------------------------------------|
 |  OS Information        |  32-bit Windows 7 Service Pack 1, build 7601 |
-|  Source Ip             |  10.0.2.15                                   |
+|  Server Ip             |  10.0.2.15                                   |
 |  Source Port           |  8000                                        |
 |  Malicious Executable  |  safecrypt.exe                               |
 |  MD5 Hash              |  4a1d88603b1007825a9c6b36d1e5de44            |
@@ -124,7 +124,7 @@ We can see from above screenshot that it successfully decrypt the pdf file, let'
 
 ## Incident Summary
 
-In this network analysis investigation the ABC Industries hit by a populer ransomware "TeslaCrypter", the ransomware was downloaded from source ip 10.0.2.15 as safecrypt.exe, this ransomware use a secure cryptographic algorithm RSA-4096 to encrypt files and apends some extensions at the end of the file, also ransomware communicated with domain "dunyamuzelerimuzesi.com" and it encrypted a pdf document "Tender.pdf" into "Tender.pdf.micro" although we successfully decrypted this pdf document later.
+In this network analysis investigation the ABC Industries hit by a popular ransomware "TeslaCrypt", the ransomware was downloaded from source ip 10.0.2.15 as safecrypt.exe, this ransomware uses the RSA-4096 algorithm to encrypt files and appends some extensions at the end of the file, also ransomware communicated with domain "dunyamuzelerimuzesi.com" and it encrypted a pdf document "Tender.pdf" into "Tender.pdf.micro" although we successfully decrypted this pdf document later.
 
 
 -----------------------------------
