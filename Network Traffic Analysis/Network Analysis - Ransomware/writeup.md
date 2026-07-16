@@ -14,9 +14,9 @@
 
 In question there is mentioned so we will se in wireshark -> Capture File properties,
 
-![answer[(Q1.png)
+![answer](Q1.png)
 
-We can see in os field complete name and version.
+We can see complete name and version details in os field.
 
 ### Answer:- 32-bit Windows 7 Service Pack 1, build 7601
 
