@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/db21256d-ef66-4899-8cb9-15198423ac41" /># Memory Analysis - Ransomware
+# Memory Analysis - Ransomware
 
 -------------------------------
 
