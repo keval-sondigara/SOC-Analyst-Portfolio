@@ -108,19 +108,15 @@ My home lab is built to simulate a real SOC monitoring environment.
 # 📂 Repository Structure
 
 
-📁 [Home Lab Projects](https://github.com/keval-sondigara/SOC_Level_1_path/tree/main/Home%20Lab%20Projects)
-
-📁 [Detection Rules](https://github.com/keval-sondigara/SOC_Level_1_path/tree/main/Detection%20rules)
-
-📁 [Log Analysis](https://github.com/keval-sondigara/SOC_Level_1_path/tree/main/Log%20Analysis)
-
-📁 [Network Traffic Analysis](https://github.com/keval-sondigara/SOC_Level_1_path/tree/main/Network%20Traffic%20Analysis)
-
-📁 [Malware Analysis](https://github.com/keval-sondigara/SOC_Level_1_path/tree/main/Malware%20Analysis)
-
-📁 [Phishing Analysis](https://github.com/keval-sondigara/SOC_Level_1_path/tree/main/Phishing%20Analysis)
-
-📁 [TryHackMe Labs](https://github.com/keval-sondigara/SOC_Level_1_path/tree/main/Tryhackme%20Labs)
+| Folder | Description |
+|---|---|
+| 📁 [Home Lab Projects](https://github.com/keval-sondigara/SOC_Level_1_path/tree/main/Home%20Lab%20Projects) | Lab builds and configuration write-ups |
+| 📁 [Detection Rules](https://github.com/keval-sondigara/SOC_Level_1_path/tree/main/Detection%20rules) | Custom detection logic and rule development |
+| 📁 [Log Analysis](https://github.com/keval-sondigara/SOC_Level_1_path/tree/main/Log%20Analysis) | Windows Event Log & Splunk investigations |
+| 📁 [Network Traffic Analysis](https://github.com/keval-sondigara/SOC_Level_1_path/tree/main/Network%20Traffic%20Analysis) | PCAP and traffic investigations |
+| 📁 [Malware Analysis](https://github.com/keval-sondigara/SOC_Level_1_path/tree/main/Malware%20Analysis) | Static/dynamic malware analysis write-ups |
+| 📁 [Phishing Analysis](https://github.com/keval-sondigara/SOC_Level_1_path/tree/main/Phishing%20Analysis) | Email and phishing investigation cases |
+| 📁 [TryHackMe Labs](https://github.com/keval-sondigara/SOC_Level_1_path/tree/main/Tryhackme%20Labs) | Completed room write-ups and notes |
 
 ---
 
@@ -144,34 +140,7 @@ Throughout this repository, you will find my practical investigations including:
 
 For every investigation, I follow a structured workflow:
 
-```
-Scenario
-
-↓
-
-Evidence Collection
-
-↓
-
-Log Analysis
-
-↓
-
-Attack Identification
-
-↓
-
-MITRE ATT&CK Mapping
-
-↓
-
-Detection Strategy
-
-↓
-
-Recommendations
-
-```
+**Scenario → Evidence Collection → Log Analysis → Attack Identification → MITRE ATT&CK Mapping → Detection Strategy → Recommendations**
 
 ---
 
@@ -186,13 +155,13 @@ Recommendations
 
 # 🎓 Learning Journey
 
-Completed:
+**Completed:**
 
 - Pre Security
 - Cyber Security 101
 - SOC Level 1
 
-Currently Learning:
+**Currently Learning:**
 
 - Active Directory & EDR Solutions
 - Detection Engineering
@@ -203,17 +172,9 @@ Currently Learning:
 
 # 📫 Connect With Me
 
-📧 Email
-
-kevalsondigara@gmail.com
-
-💼 LinkedIn
-
-https://linkedin.com/in/keval-sondigara-285186318
-
-💻 GitHub
-
-https://github.com/keval-sondigara
+📧 **Email:** kevalsondigara@gmail.com
+💼 **LinkedIn:** [linkedin.com/in/keval-sondigara-285186318](https://linkedin.com/in/keval-sondigara-285186318)
+💻 **GitHub:** [github.com/keval-sondigara](https://github.com/keval-sondigara)
 
 ---
 
