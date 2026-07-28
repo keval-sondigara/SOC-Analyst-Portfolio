@@ -18,7 +18,7 @@
 
 I'm a BCA graduate with a strong interest in Blue Team operations, Security Monitoring, Incident Response, and Threat Detection.
 
-I believe cybersecurity is best learned by doing. Rather than sticking to theory, I built my own **SOC Home Lab**, where I simulate real attacks end-to-end — from reconnaissance through privilege escalation — capture the resulting logs and traffic, investigate them as an analyst would, and document each finding with MITRE ATT&CK mappings.
+I believe cybersecurity is best learned by doing practical Rather than sticking to theory, I built my own **SOC Home Lab**, where I simulate real attacks end-to-end — from reconnaissance through privilege escalation — capture the resulting logs and traffic, investigate them as an analyst would, and document each finding with MITRE ATT&CK mappings.
 
 I'm currently seeking an **entry-level SOC Analyst** role where I can apply these skills in a production SOC.
 
