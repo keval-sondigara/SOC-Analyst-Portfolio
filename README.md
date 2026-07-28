@@ -93,7 +93,6 @@ In every home lab write-up in this repo follows the same structured workflow:
   - 📄 [Sysmon](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Log%20Analysis/Sysmon/writeup.md)
 ### 📁 Network Traffic Analysis    
   - 📄 [DanaBot](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Network%20Traffic%20Analysis/DanaBot/writeup.md)
-  - 📄 [Memory Analysis - Ransomware](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Network%20Traffic%20Analysis/Memory%20Analysis%20-%20Ransomware/writeup.md)
   - 📄 [h4cked](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Network%20Traffic%20Analysis/h4cked/writeup.md)
   - 📄 [Psexec](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Network%20Traffic%20Analysis/Psexec/writeup.md)
   - 📄 [Tomcat Takeover Lab](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Network%20Traffic%20Analysis/Tomcat%20Takeover%20Lab/writeup.md)
@@ -103,7 +102,8 @@ In every home lab write-up in this repo follows the same structured workflow:
   - 📄 [Phishing Analysis 1](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Phishing%20Analysis/Phishing%20Analysis%201/writeup.md)
   - 📄 [Phishing Analysis 2](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Phishing%20Analysis/Phishing%20analysis%202/writeup.md)
 ### 📁 Malware Analysis
-  - 📄 [Network Analysis - Ransomware]
+  - 📄 [Network Analysis - Ransomware](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Malware%20Analysis/Network%20Analysis%20-%20Ransomware/writeup.md)
+  - 📄 [Memory Analysis - Ransomware](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Malware%20Analysis/Memory%20Analysis%20-%20Ransomware/writeup.md)
 ### 📁 Tryhackme Labs           
   - 📄 [Benign](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Tryhackme%20Labs/Benign/writeup.md)
   - 📄 [Boogeyman 2](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Tryhackme%20Labs/Boogeyman_2/writeup.md)
