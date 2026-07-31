@@ -2,6 +2,8 @@
 
 ---------------------------------------------------------------------------------------
 
+### SSH is a network protocol used to log into remote servers, run commands and transfer files safely.
+
 ### In this home lab we will understands how attacker performs bruteforce attack on ssh service and how we will detect it.
 
 --------------------------------------------------------------------------------------
