@@ -10,9 +10,9 @@
 
 ## 1). Lab Architecture & Prerequisites
 
-- Windows 10 Vm.
-- Splunk Enterprise (SIEM).
-- Windows Event Logs and Sysmon.
+- Windows 10 Vm
+- Splunk Enterprise (SIEM)
+- Windows Event Logs and Sysmon
 
 
 ---
