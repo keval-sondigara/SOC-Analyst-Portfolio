@@ -124,7 +124,6 @@ In every home lab write-up in this repo follows the same structured workflow:
   - 📄 [Registry Run Key](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Home%20Lab%20Projects/4.%20Persistence/Registry%20Run%20Key/writeup.md)
   ### 6. Privilege Escalation (TA0004)
   - 📄 [SUID Privilege Escalation](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Home%20Lab%20Projects/5.%20Privilege%20Escalation/SUID%20Privilege%20Escalation/writeup.md)
-### 📁 Detection Rules       
          
 ---
 
