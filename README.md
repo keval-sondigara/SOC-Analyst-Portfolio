@@ -35,7 +35,6 @@ I'm currently seeking an **entry-level SOC Analyst** role where I can apply thes
 - Malware Analysis
 - Network Traffic Analysis
 - Windows & Linux Security
-- Detection Engineering
 - Blue Team Operations
 
 ---
@@ -132,8 +131,6 @@ In every home lab write-up in this repo follows the same structured workflow:
 - Windows Event Log & Splunk log investigation
 - Full-chain home lab simulations (recon → privilege escalation)
 - PCAP and network traffic analysis
-- Malware analysis (static/dynamic)
-- Detection rule development
 - Phishing email investigation
 - MITRE ATT&CK technique mapping
 - Structured incident documentation
@@ -163,6 +160,12 @@ In every home lab write-up in this repo follows the same structured workflow:
 - Threat Hunting
 
 ---
+
+## 🎓 Certifications
+
+**TryHackMe SOC Level 1**
+
+![answer](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-H553WSHUGQ.png)
 
 ## ⭐ Goals
 
