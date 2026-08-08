@@ -17,3 +17,11 @@
 
 ### 1). What ports did the threat actor initially find open? Format: from lowest to highest, separated by a comma.
 
+For this task, We will have to identify which ip has high volum of traffic go into **Statictics -> Conversation** tab where i found that ip address 10.0.2.74 and 10.0.2.75 contains high volume of traffic, let's find open ports
+
+We will filter for **tcp.flags.syn == 1 && tcp.flags.ack == 1**, this will result all packets with response SYN-ACK which indicates that port was opend.
+
+### Answer:- 53,80,88,135,139,389,445,464,593,636,3268,3269,5357
+
+
+### 2). 
