@@ -123,7 +123,8 @@ In every home lab write-up in this repo follows the same structured workflow:
   - 📄 [Registry Run Key Persistence](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Home%20Lab%20Projects/4.%20Persistence/Registry%20Run%20Key/writeup.md)
   ### 6. Privilege Escalation (TA0004)
   - 📄 [SUID Privilege Escalation](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Home%20Lab%20Projects/5.%20Privilege%20Escalation/SUID%20Privilege%20Escalation/writeup.md)
-         
+  ### 📁 LetsDefend:- Alert Triaging & Escalation
+  - 📄 [SOC343 - WinRAR Zero-Day Path Traversal Vulnerability (CVE‑2025‑8088)](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Alert%20Triaging%20%26%20Escalation/SOC343%20-%20WinRAR%20Zero-Day%20Path%20Traversal%20Vulnerability%20(CVE%E2%80%912025%E2%80%918088).md)
 ---
 
 ## 🔬 Practical Experience
