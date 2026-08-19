@@ -125,6 +125,7 @@ In every home lab write-up in this repo follows the same structured workflow:
   - 📄 [SUID Privilege Escalation](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Home%20Lab%20Projects/5.%20Privilege%20Escalation/SUID%20Privilege%20Escalation/writeup.md)
   ### 📁 LetsDefend:- Alert Triaging & Escalation
   - 📄 [SOC343 - WinRAR Zero-Day Path Traversal Vulnerability (CVE‑2025‑8088)](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Alert%20Triaging%20%26%20Escalation/SOC343%20-%20WinRAR%20Zero-Day%20Path%20Traversal%20Vulnerability%20(CVE%E2%80%912025%E2%80%918088).md)
+  - 📄 [SOC336 - Windows OLE Zero-Click RCE Exploitation Detected (CVE-2025-21298)](https://github.com/keval-sondigara/SOC-Analyst-Portfolio/blob/main/Alert%20Triaging%20%26%20Escalation/%20SOC336%20-%20Windows%20OLE%20Zero-Click%20RCE%20Exploitation%20Detected%20(CVE-2025-21298)/writeup.md)
 ---
 
 ## 🔬 Practical Experience
