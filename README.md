@@ -59,7 +59,7 @@ A self-built environment for simulating and monitoring real attack scenarios.
 
 | Category | Tools / Skills |
 |---|---|
-| **SIEM** | Splunk Enterprise |
+| **SIEM** | Splunk Enterprise (SPL), Elastic Search, Wazuh and Microsoft Sentinel (KQL) |
 | **Security Monitoring** | Windows Event Logs, Sysmon, Log Analysis, Alert Investigation, IOC Analysis |
 | **Network Security** | Wireshark, Tcpdump, Suricata, Zeek, Snort |
 | **Operating Systems** | Windows, Ubuntu Linux, Kali Linux |
