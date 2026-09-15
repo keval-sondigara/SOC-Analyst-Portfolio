@@ -36,6 +36,9 @@ I'm currently seeking an **entry-level SOC Analyst** role where I can apply thes
 - Network Traffic Analysis
 - Windows & Linux Security
 - Blue Team Operations
+- Threat Hunting
+- Phishing Header Analysis (SPF/DKIM/DMARC)
+- Cloud Security Basics (AWS/Azure)
 
 ---
 
@@ -59,13 +62,16 @@ A self-built environment for simulating and monitoring real attack scenarios.
 
 | Category | Tools / Skills |
 |---|---|
-| **SIEM** | Splunk Enterprise (SPL), Elastic Search, Wazuh and Microsoft Sentinel (KQL) |
-| **Security Monitoring** | Windows Event Logs, Sysmon, Log Analysis, Alert Investigation, IOC Analysis |
-| **Network Security** | Wireshark, Tcpdump, Suricata, Zeek, Snort |
-| **Operating Systems** | Windows, Ubuntu Linux, Kali Linux |
-| **Networking** | TCP/IP, DNS, DHCP, HTTP/HTTPS, ARP, OSI Model |
-| **Frameworks** | MITRE ATT&CK, Cyber Kill Chain, Pyramid of Pain |
-| **Scripting** | Bash, PowerShell (Basic), Python (Basic) |
+| **SIEM & Query Languages** | Splunk Enterprise (SPL), Elastic Search, Wazuh, Microsoft Sentinel (KQL - basic), IBM QRadar (working knowledge) |
+| **EDR / XDR (Familiarity)** | Endpoint Detection and Response (EDR), Host Isolation concepts, CrowdStrike Falcon, Microsoft Defender for Endpoint, SentinelOne |
+| **Security Monitoring** | Windows Event Logs, Sysmon, Log Analysis, Alert Investigation, IOC Analysis, Root Cause Analysis, Threat Hunting |
+| **Network Security** | Wireshark, Tcpdump, Suricata, Zeek, Snort, Nmap, PCAP Analysis |
+| **Operating Systems & Identity** | Windows, Ubuntu Linux, Kali Linux, Active Directory basics (GPO, Kerberos, NTLM) |
+| **Networking** | TCP/IP, OSI Model, DNS, DHCP, HTTP/HTTPS, SSH, FTP, ARP, Subnetting |
+| **Threat Intelligence & Sandboxing** | VirusTotal, AbuseIPDB, Any.Run, AlienVault OTX, URLScan.io, MxToolbox |
+| **Ticketing & SOC Operations** | TheHive, Jira, ServiceNow (familiarity), SLA-aware Alert Triage, Playbook/Runbook Execution, False Positive Reduction |
+| **Frameworks & Concepts** | MITRE ATT&CK, Cyber Kill Chain, Pyramid of Pain, NIST SP 800-61, OWASP Top 10, Phishing Header Analysis (SPF/DKIM/DMARC), Cloud Security Basics (AWS/Azure - familiarity) |
+| **Scripting** | Bash, PowerShell, Python (Basic - automation) |
 
 ---
 
@@ -143,6 +149,7 @@ In every home lab write-up in this repo follows the same structured workflow:
 
 - TryHackMe
 - LetsDefend
+- HackTheBox
 - Cyberdefenders & Blue Team Labs Online
 - Self-built SOC Home Lab
 
@@ -168,6 +175,8 @@ In every home lab write-up in this repo follows the same structured workflow:
 **TryHackMe SOC Level 1**
 
 ![answer](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-H553WSHUGQ.png)
+
+> Completed 20+ hands-on labs across TryHackMe, LetsDefend, HackTheBox, CyberDefenders, and Blue Team Labs.
 
 ## ⭐ Goals
 
